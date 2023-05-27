@@ -28,7 +28,10 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	//h2db
-	runtimeOnly 'com.h2database:h2'
+//	runtimeOnly 'com.h2database:h2'
+	//mysql
+	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.28'
+
 
 
 }

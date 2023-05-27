@@ -1,22 +1,26 @@
 spring:
-  datasource:
-    url:  jdbc:h2:~/test
-    driverClassName: org.h2.Driver
-    username: sa
-    password:
-    initialization-mode: always
-    schema: classpath:db/schema.sql
-    data: classpath:db/data.sql
+#  datasource:
+#    url:  jdbc:h2:~/test
+#    driverClassName: org.h2.Driver
+#    username: sa
+#    password:
+#    initialization-mode: always
+#    schema: classpath:db/schema.sql
+#    data: classpath:db/data.sql
 
 # MYSQL 연결
-#  driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://localhost:3305/bookproject
-#    username: root
-#    password: 1234
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3305/bookproject
+    username: root
+    password: 1234
 
   jpa:
     hibernate:
-      ddl-auto: create
+      #JPA가 직접 sql을 작성하도록 방언(dialect) 설정
+    dialect: org.hibernate.dialect.MySQLDialect
+
+    ddl-auto: create
     show-sql: true
     generate-ddl: true
     defer-datasource-initialization: true

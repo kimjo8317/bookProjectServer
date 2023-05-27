@@ -8,8 +8,9 @@ import javax.validation.constraints.NotEmpty;
 public class LoginForm {
 
     @NotEmpty
-    private String loginId;
+    private String id;
 
     @NotEmpty
-    private String password;
+    private String pw;
+
 }
