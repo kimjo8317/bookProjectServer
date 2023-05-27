@@ -11,7 +11,7 @@ spring:
 # MYSQL 연결
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3305/bookproject
+    url: jdbc:mysql://localhost:3305/book
     username: root
     password: 1234
 

@@ -31,8 +31,6 @@ create table 구독(
     end_date DATE NOT NULL,
     confirm TINYINT NOT NULL CHECK (sub IN (0, 1))
     );
-
-
 -- ================ bookmark 즐겨찾기
 DROP TABLE IF EXISTS 즐겨찾기;
 create table 즐겨찾기(
